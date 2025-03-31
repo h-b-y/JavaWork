@@ -1,17 +1,7 @@
----
 - hosts: db
   become: yes
+  gather_facts: false
   tasks:
   - yum: 
-      name: wget
-      state: latest
-  - yum: 
-      name: vim
-      state: latest
-
-- hosts: web
-  become: yes
-  tasks:
-  - yum: 
-      name: httpd
-      state: latest
+      name: wget 
+      state: absent
